@@ -10,7 +10,7 @@ from camera_movement_estimator import CameraMovementEstimator
 
 def main():
     video_frames = read_video("input_videos/input.mp4")
-    tracker = Tracker(model_path='models/best.pt')
+    tracker = Tracker(model_path='yolov8l.pt')
     tracks = tracker.get_object_tracks(video_frames, read_from_stub=True, stub_path="stubs/tracks_stubs.pkl")
     #get object positions
     tracker.add_positions_to_tracks(tracks)
